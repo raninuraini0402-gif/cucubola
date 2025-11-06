@@ -193,7 +193,7 @@
     // Efek logo jatuh (menggunakan file PNG)
     const totalCoins = 15;
     for (let i = 0; i < totalCoins; i++) {
-      const coin = document.createElement("img");
+      coin.src = "./falling-goat.png"; 
       coin.src = "sffsfs-removebg-preview.png"; // pastikan nama file sama
       coin.classList.add("coin-logo");
       coin.style.left = Math.random() * 100 + "%";
