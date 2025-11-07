@@ -1,188 +1,207 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CUCU BOLA</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CUCU BOLA</title>
 
-  body {
-    background: linear-gradient(135deg, #3a2f25, #7c674f);
-    color: #fff;
-    text-align: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 80px;
-  }
+  <!-- Favicon Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-  /* --- Efek logo jatuh --- */
-  .coin-logo {
-    position: fixed;
-    bottom: 100%;
-    animation: fall 8s linear infinite;
-    pointer-events: none;
-    z-index: 0;
-  }
+  <!-- Meta Browser & SEO -->
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="android-chrome-192x192.png">
+  <meta name="description" content="CUCUBOLA - Situs permainan bola, slot, dan live games terpercaya. Hadiah fullbet 4D × 10.000 / 3D × 1.000 / 2D × 100. Minimal deposit Rp10.000.">
+  <meta name="keywords" content="CUCUBOLA, slot online, sbobet, live games, tembak ikan, totomacau, fullbet, hadiah besar, judi bola online">
+  <meta name="author" content="CUCUBOLA Official">
 
-  @keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    90% { opacity: 0.9; }
-    100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
-  }
+  <!-- Open Graph (untuk WhatsApp, Telegram, Facebook) -->
+  <meta property="og:title" content="CUCUBOLA - Situs Permainan Bola & Slot Terpercaya">
+  <meta property="og:description" content="Mainkan permainan bola, slot, dan live games dengan hadiah fullbet besar! Minimal deposit hanya Rp10.000.">
+  <meta property="og:image" content="https://yourdomain.com/android-chrome-512x512.png">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CUCUBOLA">
 
-  /* Cahaya merah lembut di bawah */
-  .red-glow {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: radial-gradient(ellipse at center, rgba(255,0,0,0.25), transparent 70%);
-    animation: glow 6s ease-in-out infinite alternate;
-    z-index: 1;
-    pointer-events: none;
-  }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  @keyframes glow {
-    from { opacity: 0.2; }
-    to { opacity: 0.5; }
-  }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
 
-  /* Lingkaran atas */
-  .top-circle img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #ffd36b;
-    margin: 20px auto;
-    animation: float 3s ease-in-out infinite;
-    background: none;
-    box-shadow: 0 0 12px rgba(255,211,107,0.6);
-    z-index: 2;
-  }
+    body {
+      background: linear-gradient(135deg, #3a2f25, #7c674f);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-bottom: 80px;
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
+    /* Efek logo jatuh */
+    .coin-logo {
+      position: fixed;
+      bottom: 100%;
+      animation: fall 8s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+      filter: drop-shadow(0 0 6px rgba(255,211,107,0.6));
+    }
 
-  h1 {
-    font-size: 36px;
-    color: #ffd36b;
-    text-shadow: 0 0 10px rgba(255, 211, 107, 0.7);
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    z-index: 2;
-  }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+    }
 
-  .description {
-    font-size: 14px;
-    max-width: 90%;
-    margin: 0 auto 25px;
-    color: #f0e5d4;
-    line-height: 1.6;
-    position: relative;
-    z-index: 2;
-  }
+    .red-glow {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: radial-gradient(ellipse at center, rgba(255,0,0,0.25), transparent 70%);
+      animation: glow 6s ease-in-out infinite alternate;
+      z-index: 1;
+      pointer-events: none;
+    }
 
-  .divider {
-    width: 60%;
-    height: 2px;
-    margin: 12px auto;
-    background: linear-gradient(to right, transparent, #ffd36b, transparent);
-    border-radius: 2px;
-  }
+    @keyframes glow {
+      from { opacity: 0.2; }
+      to { opacity: 0.5; }
+    }
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    position: relative;
-    z-index: 2;
-  }
+    .top-circle img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffd36b;
+      margin: 20px auto;
+      animation: float 3s ease-in-out infinite;
+      box-shadow: 0 0 12px rgba(255,211,107,0.6);
+      z-index: 2;
+    }
 
-  .menu a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 80%;
-    max-width: 300px;
-    padding: 14px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #3a2f25;
-    background: #ffd36b;
-    transition: transform 0.2s ease, filter 0.2s ease;
-    font-size: 18px;
-    position: relative;
-  }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
 
-  .menu a:hover {
-    transform: translateY(-3px) scale(1.03);
-    filter: brightness(1.2);
-  }
+    h1 {
+      font-size: 36px;
+      color: #ffd36b;
+      text-shadow: 0 0 10px rgba(255, 211, 107, 0.7);
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
 
-  .menu a.login, .menu a.daftar {
-    animation: pulse 2.5s infinite ease-in-out;
-  }
+    .description {
+      font-size: 14px;
+      max-width: 90%;
+      margin: 0 auto 25px;
+      color: #f0e5d4;
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
 
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0px rgba(255,211,107,0.5); }
-    50% { transform: scale(1.04); box-shadow: 0 0 15px rgba(255,211,107,0.6); }
-  }
+    .divider {
+      width: 60%;
+      height: 2px;
+      margin: 12px auto;
+      background: linear-gradient(to right, transparent, #ffd36b, transparent);
+      border-radius: 2px;
+    }
 
-  .menu a.default {
-    font-size: 14px;
-    background: rgba(255, 211, 107, 0.8);
-    color: #3a2f25;
-  }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
+    }
 
-  .menu a.default:hover {
-    background: rgba(255, 211, 107, 1);
-  }
+    .menu a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 80%;
+      max-width: 300px;
+      padding: 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #3a2f25;
+      background: #ffd36b;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      font-size: 18px;
+      position: relative;
+    }
 
-  footer {
-    font-size: 13px;
-    color: #ffd36b;
-    margin-top: 40px;
-    text-shadow: 0 0 6px rgba(255,211,107,0.4);
-    position: relative;
-    z-index: 2;
-  }
-</style>
+    .menu a:hover {
+      transform: translateY(-3px) scale(1.03);
+      filter: brightness(1.2);
+    }
+
+    .menu a.login {
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0px rgba(255,211,107,0.5); }
+      50% { transform: scale(1.04); box-shadow: 0 0 15px rgba(255,211,107,0.6); }
+    }
+
+    .menu a.default {
+      font-size: 14px;
+      background: rgba(255, 211, 107, 0.8);
+      color: #3a2f25;
+    }
+
+    footer {
+      font-size: 13px;
+      color: #ffd36b;
+      margin-top: 40px;
+      text-shadow: 0 0 6px rgba(255,211,107,0.4);
+      position: relative;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body>
 
   <div class="top-circle">
-    <img src="goat-logo.png" alt="Goat Logo" />
+    <img src="falling-goat.png" alt="CUCUBOLA Logo" />
   </div>
 
   <h1>CUCUBOLA</h1>
 
   <div class="description">
-    ANGKA ONLINE / CUCUBOLA / GAMES BOLA TERKENAL SEPERTI SBOBET, SLOT, LIVEGAMES, DAN PERMAINAN TEMBAK IKAN.<br>
+    ANGKA ONLINE / GAMES BOLA TERKENAL SEPERTI SBOBET, SLOT, LIVEGAMES, DAN PERMAINAN TEMBAK IKAN<br>
     <div class="divider"></div>
-    <strong>HADIAH FULLBET :</strong> 4D × 10.000 / 3D × 1.000 / 2D × 100<br>
-    <br>(Termasuk TOTOMACAU)<br>
+    <strong>Hadiah FULLBET:</strong><br>4D × 10.000 • 3D × 1.000 • 2D × 100<br>
+    (Termasuk TOTOMACAU)<br>
     <div class="divider"></div>
     <strong>Minimal Deposit Rp.10,000 & Withdraw Rp.50,000</strong>
+     <strong>CUCUBOLA</strong>
   </div>
 
   <div class="menu">
-    <a class="login" href="https://ligabandot71.com/?referralid=anshun168" target="_blank"><i class="fas fa-sign-in-alt"></i> LOGIN/DAFTAR</a>
+    <a class="login" href="https://ligabandot71.com/?referralid=anshun168" target="_blank"><i class="fas fa-sign-in-alt"></i> LOGIN / DAFTAR</a>
     <a class="default" href="https://ligabandot.com/rtp/?code=10515752" target="_blank"><i class="fas fa-bullseye"></i> RTP SLOT</a>
-    <a class="default" href="https://cucubola.com" target="_blank"><i class="fab fa-whatsapp"></i> WA 0812-66666-347</a>
+    <a class="default" href="https://wa.me/6281266666347" target="_blank"><i class="fab fa-whatsapp"></i> Hubungi WA</a>
   </div>
 
   <footer>© 2025/2030 CUCUBOLA - All Rights Reserved</footer>
@@ -190,11 +209,11 @@
   <div class="red-glow"></div>
 
   <script>
-    // Efek logo jatuh (menggunakan file PNG)
-    const totalCoins = 15;
+    // Efek logo jatuh (falling-goat.png)
+    const totalCoins = 20;
     for (let i = 0; i < totalCoins; i++) {
-      coin.src = "./falling-goat.png"; 
-      coin.src = "sffsfs-removebg-preview.png"; // pastikan nama file sama
+      const coin = document.createElement("img");
+      coin.src = "falling-goat.png";
       coin.classList.add("coin-logo");
       coin.style.left = Math.random() * 100 + "%";
       coin.style.animationDuration = 6 + Math.random() * 6 + "s";
